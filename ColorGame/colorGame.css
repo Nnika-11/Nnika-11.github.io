@@ -7,7 +7,7 @@ body{
   padding-bottom: 30%;
   float: left;
   margin: 1.66%;
-  
+
 
 }
 .container{
@@ -15,5 +15,8 @@ body{
   margin: 0 auto;
 }
 h1{
+  color: white;
+}
+#message{
   color: white;
 }
