@@ -8,7 +8,7 @@ var colors = [
   "rgb(255, 0, 255)"
 ]
 var squares = document.querySelectorAll(".square");
-var pickedColor = colors[3];
+var pickedColor = pickColor();
 var colorDisplay = document.getElementById("colorDisplay");
 var messageDisplay = document.querySelector("#message");
 colorDisplay.textContent = pickedColor;
@@ -38,4 +38,13 @@ function changeColors(){
     squares[i].style.backgroundColor = pickedColor;
   }
   // h1.style.backgroundColor = pickedColor;
+}
+function pickColor(){
+  //get num from 1 to 255
+  // Math.floor(Math.random()*255+1)
+
+  // pick random from array
+  var randomColor = Math.floor(Math.random()*colors.length);
+  return colors[randomColor];
+
 }
