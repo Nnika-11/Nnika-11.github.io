@@ -10,14 +10,18 @@ colorDisplay.textContent = pickedColor;
 
 resetButton.addEventListener("click", function(){
 
+
     //change colors of squares
   colors = generateColorsArray(6);
   pickedColor = pickColor();
   //pick a random color
+  resetButton.textContent = "New Colors";
   colorDisplay.textContent = pickedColor;
+  h1.style.backgroundColor = "initial";
   for(var i = 0; i<squares.length; i++){
     //add initial colors to squates
     squares[i].style.backgroundColor = colors[i];
+  }
 });
 
 for(var i = 0; i<squares.length; i++){
@@ -31,6 +35,7 @@ for(var i = 0; i<squares.length; i++){
         // (clickedColor===pickedColor) alert("correct");
         messageDisplay.textContent = "Correct!"
         changeColors();
+        resetButton.textContent = "Play again?";
     }
       else {
           this.style.backgroundColor = "#232323";
