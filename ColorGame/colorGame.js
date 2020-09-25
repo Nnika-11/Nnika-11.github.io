@@ -18,21 +18,6 @@ resetButton.addEventListener("click", function(){
   for(var i = 0; i<squares.length; i++){
     //add initial colors to squates
     squares[i].style.backgroundColor = colors[i];
-    squares[i].addEventListener("click", function(){
-        //grab clicked color
-        var clickedColor = this.style.backgroundColor;
-          //compare color to pickedColor
-        if(clickedColor === pickedColor){
-          // (clickedColor===pickedColor) alert("correct");
-          messageDisplay.textContent = "Correct!"
-          changeColors();
-      }
-        else {
-            this.style.backgroundColor = "#232323";
-            messageDisplay.textContent = "Try again!"
-          }
-        });
-        }
 });
 
 for(var i = 0; i<squares.length; i++){
