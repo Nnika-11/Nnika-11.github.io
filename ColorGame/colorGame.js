@@ -1,11 +1,40 @@
 // alert("connected");
-var colors = generateColors(6);
+var colors = generateColorsArray(6);
 var squares = document.querySelectorAll(".square");
 var pickedColor = pickColor();
 var colorDisplay = document.getElementById("colorDisplay");
 var messageDisplay = document.querySelector("#message");
 var h1 = document.querySelector("h1");
+var resetButton = document.querySelector("#reset");
 colorDisplay.textContent = pickedColor;
+
+resetButton.addEventListener("click", function(){
+
+    //change colors of squares
+  colors = generateColorsArray(6);
+  pickedColor = pickColor();
+  //pick a random color
+  colorDisplay.textContent = pickedColor;
+  for(var i = 0; i<squares.length; i++){
+    //add initial colors to squates
+    squares[i].style.backgroundColor = colors[i];
+    squares[i].addEventListener("click", function(){
+        //grab clicked color
+        var clickedColor = this.style.backgroundColor;
+          //compare color to pickedColor
+        if(clickedColor === pickedColor){
+          // (clickedColor===pickedColor) alert("correct");
+          messageDisplay.textContent = "Correct!"
+          changeColors();
+      }
+        else {
+            this.style.backgroundColor = "#232323";
+            messageDisplay.textContent = "Try again!"
+          }
+        });
+        }
+});
+
 for(var i = 0; i<squares.length; i++){
   //add initial colors to squates
   squares[i].style.backgroundColor = colors[i];
@@ -24,7 +53,7 @@ for(var i = 0; i<squares.length; i++){
         }
   });
 }
-function generateColors(num){
+function generateColorsArray(num){
   //make an array with num random colors
   var colorsArr =[];
   for(var i=0; i<num; i++){
