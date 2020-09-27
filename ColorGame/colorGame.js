@@ -6,11 +6,12 @@ var colorDisplay = document.getElementById("colorDisplay");
 var messageDisplay = document.querySelector("#message");
 var h1 = document.querySelector("h1");
 var resetButton = document.querySelector("#reset");
+var easyBtn = document.querySelector("#easyBtn");
+var hardBtn = document.querySelector("#hardBtn");
 colorDisplay.textContent = pickedColor;
 
+
 resetButton.addEventListener("click", function(){
-
-
     //change colors of squares
   colors = generateColorsArray(6);
   pickedColor = pickColor();

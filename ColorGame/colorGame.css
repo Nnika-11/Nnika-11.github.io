@@ -21,8 +21,11 @@ h1{
   background-color: white;
   height: 30px;
   text-align: center;
-  
+
 }
 #message{
   color: black;
+}
+.selected{
+background: blue;
 }
