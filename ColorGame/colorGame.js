@@ -19,7 +19,7 @@ easyBtn.addEventListener("click", function(){
   colors = generateColorsArray(numSquares);
   pickedColor = pickColor();
   colorDisplay.textContent = pickedColor;
-  h1.style.backgroundColor = "initial";
+  h1.style.backgroundColor = "steelblue";
   for(var i = 0; i<squares.length; i++){
     //check if there is a color at this index
     if(colors[i])
@@ -37,7 +37,7 @@ hardBtn.addEventListener("click", function(){
   colors = generateColorsArray(numSquares);
   pickedColor = pickColor();
   colorDisplay.textContent = pickedColor;
-  h1.style.backgroundColor = "initial";
+  h1.style.backgroundColor = "steelblue";
   for(var i = 0; i<squares.length; i++){
     //add initial colors to squates
     squares[i].style.backgroundColor = colors[i];
@@ -53,7 +53,7 @@ resetButton.addEventListener("click", function(){
   //pick a random color
   resetButton.textContent = "New Colors";
   colorDisplay.textContent = pickedColor;
-  h1.style.backgroundColor = "initial";
+  h1.style.backgroundColor = "steelblue";
   for(var i = 0; i<squares.length; i++){
     //add initial colors to squates
     squares[i].style.backgroundColor = colors[i];
