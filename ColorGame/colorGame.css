@@ -8,11 +8,17 @@ body{
   padding-bottom: 30%;
   float: left;
   margin: 1.66%;
+  border-radius: 15%;
+  /* change property values smoothly  specified CSS property + time in sec*/
+
+  transition:background 0.6s;
+
 }
 .container{
   max-width: 800px;
-  margin: 0 auto;
+  margin: 20px auto;
 }
+
 h1{
   color: white;
   text-align: center;
@@ -38,7 +44,8 @@ h1{
   width: 20%;
 }
 .selected{
-background: blue;
+  color: white;
+  background-color: steelblue;
 }
 button{
   border:none;
@@ -48,4 +55,11 @@ button{
   color: steelblue;
   letter-spacing: 1px;
   font-size: inherit;
+  /* change property values smoothly  specified CSS property + time in sec*/
+  transition: all 0.4s;
+}
+
+button:hover{
+  color: white;
+  background-color: steelblue;
 }
