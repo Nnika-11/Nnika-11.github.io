@@ -16,6 +16,7 @@ easyBtn.addEventListener("click", function(){
   easyBtn.classList.add("selected");
   hardBtn.classList.remove("selected");
   numSquares = 3;
+  messageDisplay.textContent="";
   colors = generateColorsArray(numSquares);
   pickedColor = pickColor();
   colorDisplay.textContent = pickedColor;
@@ -34,6 +35,7 @@ hardBtn.addEventListener("click", function(){
   hardBtn.classList.add("selected");
   easyBtn.classList.remove("selected");
   numSquares = 6;
+  messageDisplay.textContent="";
   colors = generateColorsArray(numSquares);
   pickedColor = pickColor();
   colorDisplay.textContent = pickedColor;
@@ -51,7 +53,9 @@ resetButton.addEventListener("click", function(){
   colors = generateColorsArray(numSquares);
   pickedColor = pickColor();
   //pick a random color
-  resetButton.textContent = "New Colors";
+  // resetButton.textContent = "New Colors";
+  this.textContent = "New Colors";
+  messageDisplay.textContent="";
   colorDisplay.textContent = pickedColor;
   h1.style.backgroundColor = "steelblue";
   for(var i = 0; i<squares.length; i++){

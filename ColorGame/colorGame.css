@@ -57,6 +57,7 @@ button{
   font-size: inherit;
   /* change property values smoothly  specified CSS property + time in sec*/
   transition: all 0.4s;
+  outline:none;
 }
 
 button:hover{
