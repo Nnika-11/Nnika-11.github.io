@@ -1,20 +1,33 @@
 // alert("connected");
 var numSquares = 6;
-var colors = generateColorsArray(numSquares);
+//dont need it animore as I doing reset in init()
+//var colors = generateColorsArray(numSquares);
+var colors = [];
+var pickedColor;
 var squares = document.querySelectorAll(".square");
-var pickedColor = pickColor();
 var colorDisplay = document.getElementById("colorDisplay");
 var messageDisplay = document.querySelector("#message");
 var h1 = document.querySelector("h1");
 var resetButton = document.querySelector("#reset");
 var modeButtons = document.querySelectorAll(".mode");
-colorDisplay.textContent = pickedColor;
 init();
 
 
-//for loop in case of additin other mode
 function init(){
   //mode buttons event listener
+  setupModeButtons();
+//pick color logic
+  setupSquares();
+  reset();
+}
+
+resetButton.addEventListener("click", function(){
+    //change colors of squares
+  reset();
+});
+
+//for loop in case of additin other mode
+function setupModeButtons(){
   for(var i =0; i<modeButtons.length; i++){
     modeButtons[i].addEventListener("click", function(){
       //hardcoded!!!!
@@ -25,8 +38,8 @@ function init(){
       reset();
     });
   }
-
-//pick color logic
+}
+function setupSquares(){
   for(var i = 0; i<squares.length; i++){
     squares[i].addEventListener("click", function(){
         //grab clicked color
@@ -44,13 +57,7 @@ function init(){
           }
     });
   }
-  reset();
 }
-
-resetButton.addEventListener("click", function(){
-    //change colors of squares
-  reset();
-});
 
 function reset(){
   colors = generateColorsArray(numSquares);
