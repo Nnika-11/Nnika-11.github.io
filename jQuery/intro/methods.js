@@ -1,3 +1,6 @@
+// Methods //
+
+
 //get text of elements as one string
 $("li").text();
 //rewrite text of element
@@ -5,7 +8,7 @@ $("h1").text("new way to change text with Methods");
 //get inner html as a one string
 $("li").html();
 //change inner html
-$("ul").html("<li>change 1</li><li>change 2</li>");
+$("ul").html("<li>change 1</li><li>change 2</li><li>change 3</li>");
 //some css
 $("img").css( "width","200px");
 //get arrtibute val with attr() method and change src
@@ -24,3 +27,6 @@ $("h1").addClass("correct underlined");
 $("h1").removeClass("correct");
 //change state (add/remove)
 $("h1").toggleClass("correct");
+$("h1").toggleClass("correct");
+//first element :first was depticated (same with last())
+$("li").first().toggleClass("wrong");
