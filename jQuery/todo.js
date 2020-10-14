@@ -19,7 +19,7 @@ $("input[type='text']").keypress(function(event){
     var newTask = $(this).val();
     $(this).val("");
     //create new li and add to ul
-    $("ul").append("<li><span>X</span> "+newTask+"</li>");
+    $("ul").append("<li><span><i class='fas fa-trash-alt'></i></span> "+newTask+"</li>");
   }
 
 });
