@@ -13,7 +13,7 @@
     <h1>Some very basic stuff you forget when not practice</h1>
     <h3>Semantic Markup</h3>
     <p>what perpose/role does HTML element have</p>
-    <p>use main, header, section, nav, footer, article - meaningful, not just div organisation that say nothing</p>
+    <p>use main, header, section, nav, footer, article, aside (side menu/side nav/), time, figure (img), data etc - meaningful, not just div organisation that say nothing</p>
     <p>for use screen readers</p>
   </section>
   <section>
@@ -24,6 +24,72 @@
   <section>
     <h3>html entities</h3>
     <p>&12345; &rarr;<a href="https://dev.w3.org/html5/html-author/charref"> &Hcirc;&Tcaron;&Mopf;&Lmidot; entities </a> </p>
+  </section>
+  <section>
+    <h3>input</h3>
+    <p> self-closing </p>
+    <input type="text">
+    <input type="password">
+    <input type="color">
+    <input type="range">
+    <input type="time">
+  </section>
+  <section>
+    <h3>Form</h3>
+    <form action="https://www.google.com/search">
+      <!-- te search link is  https://www.google.com/search?q=action - means we need q name input to send in submition-->
+      <!-- https://www.youtube.com/results?search_query=video  search_query name)-->
+      <input type="text" name="q">
+      <button >search google</button>
+    </form>
+  </section>
+  <section>
+    <br>
+    <table>
+      <thead>
+        <tr>
+          <th colspan="2">TABLE</th>
+        </tr>
+        <tr>
+          <th>tag</th>
+          <th>definition</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>table</td>
+          <td>defines an HTML table</td>
+        </tr>
+        <tr>
+          <td>thead,tbody,tfoot</td>
+          <td>to group header, body & foot content</td>
+        </tr>
+        <tr>
+          <td>tr</td>
+          <td>table row</td>
+        </tr>
+        <tr>
+          <td>th, td</td>
+          <td> table header(bold and centered) & table data/cell regular and left-aligned</td>
+        </tr>
+        <tr>
+          <td>rowspan</td>
+          <td rowspan="2"> make a cell span many rows</td>
+        </tr>
+        <tr>
+          <td>rowspan</td>
+        </tr>
+        <tr>
+          <td colspan="2">colspan</td>
+        </tr>
+        <tr>
+          <td colspan="2"> make a cell span many columns</td>
+        </tr>
+      </tbody>
+      <tfoot>
+
+      </tfoot>
+    </table>
   </section>
   <section>
     <h3>some rare used tags</h3>
