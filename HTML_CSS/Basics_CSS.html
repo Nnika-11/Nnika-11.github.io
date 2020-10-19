@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="Basics_CSS.css">
+  <title>CSS</title>
+</head>
+
+<body>
+  <div class="parent">
+    <h2>Selectors</h2>
+    <h3>Descendent</h3>
+    <p>select all p nested inside div</p>
+    <p>div p</p>
+    <p class="green">select all p with class green nested inside div</p>
+    <p class="green">div p.green</p>
+    <h6 class="green">has green class</h6>
+
+    <h3>Adjacent</h3>
+    <p> Select p that are immediately preceded by h3 preceded by h6(same lvl)</p>
+    <p>h6+h3+p</p>
+    <div class="parent">
+      <h3>Direct Child</h3>
+      <p> Select p that are immediately preceded by h3 preceded by h6(same lvl)</p>
+      <p>h6+h3+p</p>
+    </div>
+  </div>
+</body>
+
+</html>

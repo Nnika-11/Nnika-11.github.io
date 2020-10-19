@@ -1,0 +1,13 @@
+div p{
+  font-weight: bolder;
+}
+
+div p.green{
+  background-color: green;
+}
+h6+h3+p{
+  color: red;
+}
+.parent > p {
+  text-decoration: underline;
+}
