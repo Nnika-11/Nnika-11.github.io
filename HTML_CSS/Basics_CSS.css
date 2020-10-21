@@ -1,13 +1,33 @@
+/* Descendent */
+/* select all p nested inside div */
 div p{
   font-weight: bolder;
 }
-
+/* select all p with class green nested inside div */
 div p.green{
   background-color: green;
 }
+
+/* Adjacent */
+ /* p that are immediately preceded by h3 preceded by h6 */
 h6+h3+p{
   color: red;
 }
-.parent > p {
+
+/* Direct Child */
+/* Select p that are inside the parent2 class */
+.parent2 > p {
   text-decoration: underline;
+}
+
+/* Attribute selector */
+/* Select input with type text */
+input[type="text"]{
+  width: 300px;
+  color: #339922;
+}
+/* select all input with attribute value that contains S */
+input[value*="t"]{
+  width: 200px;
+  color: #555577;
 }
