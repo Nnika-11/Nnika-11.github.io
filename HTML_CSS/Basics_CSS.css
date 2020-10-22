@@ -1,3 +1,22 @@
+/* CSS Cascade & Specificity */
+/* 1) last of the same kind win */
+.cascade{
+  color: yellow;
+}
+.cascade{
+  color: black;
+}
+
+/* 2)!Important- always win   Inline Styles > id  >  class/attr/pseudo-class  >element/pseudo-element */
+/* cascade+p will win over cascade */
+/* 0 1 1*/
+.cascade p{
+  color: #114422;
+}
+/* 100*/
+#myId {
+  color: #112233;
+}
 /* Descendent */
 /* select all p nested inside div */
 div p{
