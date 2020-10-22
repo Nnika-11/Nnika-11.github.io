@@ -30,11 +30,25 @@
     <h3>Attribute selector</h3>
     <input type="text" name="" value=" Select input with type text">
     <input type="text" name="" value=" [type='text']">
+    <input type="color" name="" value="">
     <p> Add some RegExp - *= for contain; *='S' - select all input with attribute value that contains S</p>
     <input type="text" name="" value=" [type*='S']">
-      <p> $= ednding with; </p>
-    <input type="color" name="" value="">
+    <p> $= ednding with; </p>
   </div>
+
+  <h2>Pseudo-classes</h2>
+  <div class="parent">
+    <p>:hover :active :checked :nth-of-type :placeholder-shown</p>
+    <p> .parent:nth-of-type(2n) - everything inside second parent (every second parent) </p>
+  </div>
+
+  <h2>Pseudo-elements</h2>
+  <div class="parent">
+    <p>::after ::before  ::first-line  ::selection</p>
+    <p> h2::first-letter </p>
+    <p> p::selection - element style when selected </p>
+  </div>
+
 </body>
 
 </html>

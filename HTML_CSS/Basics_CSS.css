@@ -27,7 +27,27 @@ input[type="text"]{
   color: #339922;
 }
 /* select all input with attribute value that contains S */
-input[value*="t"]{
+input[value*="S"]{
   width: 200px;
   color: #555577;
+}
+
+/* Pseudo-classes */
+/* :hover :active :checked :nth-of-type :placeholder-shown */
+/* p:nth-of-type(odd) */
+/* p:nth-of-type(2) - just second */
+/* Using a formula (an + b). Description: a represents a cycle size, n is a counter (starts at 0), and b is an offset value. */
+.parent:nth-of-type(2d){
+  color: blue;
+  font-size: 20px;
+}
+
+/* Pseudo-elements*/
+/* ::after ::before ::first-letter ::first-line  ::selection*/
+h2::first-letter{
+  font-size: 25px;
+  color: red;
+}
+p::selection{
+  background-color: purple;
 }
