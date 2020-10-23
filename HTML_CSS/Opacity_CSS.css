@@ -1,0 +1,30 @@
+/* alpha-channel */
+/* rgba - last is alpha */
+section{
+  width: 500px;
+  height: 500px;
+  background-color: green;
+}
+#rgba{
+  width: 50%;
+  height: 25%;
+  /* 1- solid, 0 - transparent */
+  /* does not affect content */
+  background-color: rgba(233,255,222,0.4);
+}
+/*opacity affect content */
+#opacity{
+  width: 50%;
+  height: 25%;
+  background-color:orange;
+  /* from 0 - none to 1 */
+  opacity: 0.4
+}
+/* for hexdecimal we can add 2 more digits to change opacity */
+#hex{
+  width: 50%;
+  height: 25%;
+  /* from 0 to ff */
+  /* does not affect content */
+  background-color:#aaaaff88;
+}
