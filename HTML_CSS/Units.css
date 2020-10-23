@@ -1,0 +1,42 @@
+/* Absolute
+/* px,pt,cm,in,mm */
+
+
+/* Relative
+EM REM VH %  */
+/* % - relative to other value (of the element or parent) */
+section{
+  background-color: gray;
+  width: 700px;
+  height: 200px;
+}
+div{
+  /* width - % of parent */
+  width: 70%;
+  background-color: green;
+  font-size: 20px;
+}
+h2{
+  /*   line-height - % of element itself */
+  line-height: 40%;
+}
+
+/* em - with font size - 1em - font-size of parent 2em - twice the parent font size */
+/* of div */
+p{
+  font-size: 1.2em;
+/* em with properties: 1em = computed size of the element itself*/
+/* padding */
+  margin-left: 1.2em;
+}
+/* em -dont work properly with multy heirarchy*/
+/*nusted elements are staked*/
+/* because font-size is parent based */
+ ul {
+  font-size: 1.3em;
+}
+/* rem */
+/* drive font-size is relative to root html  */
+li{
+  font-size: 1.2rem;
+}
