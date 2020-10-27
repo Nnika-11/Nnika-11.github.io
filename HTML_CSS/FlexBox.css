@@ -1,0 +1,41 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+h1 {
+    text-align: center;
+}
+#container {
+    background-color: #003049;
+    width: 90%;
+    height: 500px;
+    margin: 0 auto;
+    border: 5px solid #003049;
+    /*all content will be inside of the container*/
+    display: flex;
+    /* set container - it have 2 axis main(x - from left to right) and cross(y-top to bottom) */
+    /* flex-direction: row (default), row-reverse, column, column-reverse */
+    /* justify-content - flex-start(default) according main axis, flex-end - take content and move to the end of axsis
+    center, space-between(elements, but not container), space-around, space-evenly */
+    flex-direction:row-reverse;
+    justify-content: space-around;
+    /* flex-wrap - items are forced onto one line or can wrap onto multiple lines */
+    /* flex-wrap: wrap; - will fit to the container with a full size
+    wrap-reverse (by main axis right to left)*/
+    flex-wrap: wrap-reverse;
+
+    /* align-items - use cross axis (vertical mostly)*/
+    /* align-items - flex-end,center, */
+    align-items: center;
+    /* align-content - space between cross axis */
+    align-content:flex-end;
+
+}
+#container div{
+  width: 200px;
+  height: 200px;
+  font-size: 3em;
+}
+#container div:nth-child(2){
+  /* align-self - used for individual element to change space by cross axis */
+  align-self: flex-start;
+}
