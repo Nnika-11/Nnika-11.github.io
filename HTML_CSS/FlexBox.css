@@ -1,3 +1,5 @@
+
+
 body {
     font-family: 'Open Sans', sans-serif;
 }
@@ -28,14 +30,29 @@ h1 {
     align-items: center;
     /* align-content - space between cross axis */
     align-content:flex-end;
-
 }
+
+
+/* flex: flex-grow  flex-shrink | flex-basis */
 #container div{
   width: 200px;
   height: 200px;
   font-size: 3em;
+    /* flex-basis: initial size of an element before additional space*/
+    /* careful with wrap */
+    /* ignored width/height - depends on main axes */
+  flex-basis: 400px;
 }
 #container div:nth-child(2){
   /* align-self - used for individual element to change space by cross axis */
   align-self: flex-start;
+
+  /* flex-shrink: if the items larger than container - how to shrink (unit-less number value) - according other elements how fast*/
+  /* in this example will work with commented wrap */
+  /* flex-shrink: 3; */
+}
+#container div:nth-child(5){
+  /* flex-grow: amaount of available space - unit-less number value  */
+  /* use max-width/min-width to control*/
+  flex-grow: 1;
 }
