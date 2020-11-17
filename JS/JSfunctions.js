@@ -53,4 +53,8 @@ var person = {
   }
 };
 
-console.log(person.sayHello("Jerico"));
+console.log(person.sayHello("Jerico")); //JSfunctions.js:56 John said Hello to Jerico
+//but remember the invocation context
+sayHelloTo = person.sayHello;
+//this dont refer to object cat, but to window object, that has no firstName
+console.log(sayHelloTo("Jerico")); //result: undefined said Hello to Jerico
