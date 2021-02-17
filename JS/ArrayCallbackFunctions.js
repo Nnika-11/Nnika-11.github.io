@@ -52,12 +52,17 @@ console.log(cars.every(car => car.type&&car.capacity&&car.color)) ;
 // reduce(accumulator, currentVal) - executes a reducer function on each element of the array, resulting in single output value.
 
 const sixFactorial = [2,3,4,5,6].reduce((accumulator,currentVal)=>{
-  return accumulator*currentVal;
+  return accumulator*currentVal; //this goes to accumulator
 })
+
+const arraySum = [2,3,4,5,6].reduce((accumulator,currentVal)=>{ //add new starting point(accumulator) for array
+  return accumulator+currentVal; //this goes to accumulator
+},1)
+
 
 var minValue = (min, cur) => min<cur ? min:cur;
 console.log([2,3,4,-1,5,6].reduce(minValue));
-console.log([2,3,4,-1,6,7].reduce(minValue,-8)); //add new val to score
+console.log([2,3,4,-1,6,7].reduce(minValue,-8)); //add new starting
 
 //setTimeout(CallBack, millisec))
 setTimeout(() => console.log("hello!"),3000);
@@ -67,5 +72,9 @@ setTimeout(() => console.log("hello!"),3000);
 // const id = setInterval(() => console.log(Math.random()),3000);
 //to stop:   clearInterval(id)
 
+// arrow function ignors 'this' keyword
 
-//every
+
+var car1Color = (function(cars){
+  console.log(this[0].color);
+})();
