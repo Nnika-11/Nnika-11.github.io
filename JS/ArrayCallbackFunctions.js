@@ -74,7 +74,15 @@ setTimeout(() => console.log("hello!"),3000);
 
 // arrow function ignors 'this' keyword
 
-
-var car1Color = (function(cars){
-  console.log(this[0].color);
-})();
+let Cat = {
+  name : "Whita",
+  color: "white",
+  say: function(){
+    console.log(`${this.name} says meow`); //with this (function woth this refer to execution context - obj it was called)
+  },
+  say2: ()=>{
+    console.log(`${this.name} says meow`); //with arrow this refer to the scope it was created (window)
+  }
+}
+Cat.say(); //result: Whita says meow
+Cat.say2(); //result:  says meow
