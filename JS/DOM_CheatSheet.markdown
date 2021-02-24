@@ -6,11 +6,15 @@
 | ByTagName       | ("tagName")        |
 | ByClassName     | (".className")     |
 ## Properties &Methods
-**Text**
+
+
+ <details><summary><b>Text</b></summary>
+   
 * .textContent - all text even if invisible
 * .innerText - visible text
 * .innerHTML - to add html tags in text
-
+ </details>
+ 
 **Attribute**
 * .attrName
 * .getAttribute
