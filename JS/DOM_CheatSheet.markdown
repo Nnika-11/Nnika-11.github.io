@@ -5,26 +5,38 @@
 | ById            | ("#id")            |
 | ByTagName       | ("tagName")        |
 | ByClassName     | (".className")     |
-## Properties &Methods
-**Text**
+
+## Properties &Methods 
+<details>
+ <summary><b>Text</b></summary>
+   
 * .textContent - all text even if invisible
 * .innerText - visible text
 * .innerHTML - to add html tags in text
+ </details>
 
-**Attribute**
+<details>
+ <summary><b>Attribute</b></summary>
+
 * .attrName
 * .getAttribute
 * .setAttribute (“attrName”, “value”)
 * .removeAttribute
+ </details>
+ 
+<details>
+ <summary><b>Style</b></summary>
 
-**Style**
-* .style.DOMStyleObject
+* .style.[DOMStyleObject](https://www.w3schools.com/jsref/dom_obj_style.asp)
 * window.getComputedStyle(“element”)
 * .classList.add(“className”)
 * .classList.toggle(“className”)
 * .classList.remove(“className”)
+ </details>
+ 
+<details>
+ <summary><b>Nodes</b></summary>
 
-**Nodes**
 * .parentElement()
 * .children .childElementCount
 * .nextSibling .previousSibling (text) .nextElementSibling .previousElementSibling (tag)
@@ -32,6 +44,9 @@
     * .appendChild(element)
     * .append(“text”, element)
     * .prepend() – first child
-    * .insertAdjacentElement(position, element) – sibling
+    * .[insertAdjacentElement](https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentElement) (position, element) – sibling
     * .after .before
 * .removeChild(child) – not convenient; .remove() 
+</details>
+
+## Events
