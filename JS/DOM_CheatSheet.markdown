@@ -5,11 +5,11 @@
 | ById            | ("#id")            |
 | ByTagName       | ("tagName")        |
 | ByClassName     | (".className")     |
+## Properties &Methods
 
-## Properties &Methods 
-<details>
- <summary><b>Text</b></summary>
-   
+
+ <details><summary><b>Text</b></summary>
+
 * .textContent - all text even if invisible
 * .innerText - visible text
 * .innerHTML - to add html tags in text
@@ -23,7 +23,7 @@
 * .setAttribute (“attrName”, “value”)
 * .removeAttribute
  </details>
- 
+
 <details>
  <summary><b>Style</b></summary>
 
@@ -33,7 +33,7 @@
 * .classList.toggle(“className”)
 * .classList.remove(“className”)
  </details>
- 
+
 <details>
  <summary><b>Nodes</b></summary>
 
@@ -46,7 +46,7 @@
     * .prepend() – first child
     * .[insertAdjacentElement](https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentElement) (position, element) – sibling
     * .after .before
-* .removeChild(child) – not convenient; .remove() 
+* .removeChild(child) – not convenient; .remove()
 </details>
 
 ## Events
