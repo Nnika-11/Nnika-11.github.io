@@ -50,3 +50,12 @@
 </details>
 
 ## Events
+
+.addEventListener([‘event’](https://www.w3schools.com/jsref/dom_obj_event.asp ), () => {function body}, [options](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener))
+
+*evt – event object automatically passed in to the callback function .addEventListener(evt)*
+
+* click
+* Keyboard: keydown, keyup => (evt.key & evt.code)
+* Forms: submit, => evt.preventDefault() – prevent auto request sending, .elements.inputName.value
+
