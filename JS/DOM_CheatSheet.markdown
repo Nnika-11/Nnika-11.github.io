@@ -58,4 +58,9 @@
 * click
 * Keyboard: keydown, keyup => (evt.key & evt.code)
 * Forms: submit, => evt.preventDefault() – prevent auto request sending, .elements.inputName.value
+* Input: change, input
+* Evt.stopPropagation() – to stop event bubbling
+* Event delegation (for the future created elements) use parent eventListener and: evt.target.(nodeName)
 
+*for debugging purpose*
+**console.dir(object)**
