@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', Helvetica, Arial, sans-serif;
+}
+
+
+/*************************************************
+HEADER
+*************************************************/
+header{
+  padding: 0px 50px;
+  background-image: url(./img/VsBg.jpg);
+  background-position: center;
+ background-repeat: no-repeat;
+}
+.p1{
+  color: Tomato;
+}
+.p2{
+  color:DodgerBlue;
+}
+.vs{
+    color:#f2ccff;
+}
+/* header>h1,header>h2{
+  display: inline-block;
+} */
+/*************************************************
+MAIN CONTENT
+*************************************************/
