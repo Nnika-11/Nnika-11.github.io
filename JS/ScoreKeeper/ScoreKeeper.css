@@ -5,16 +5,24 @@
   box-sizing: border-box;
   font-family: 'Lato', Helvetica, Arial, sans-serif;
 }
-
+html, body {
+    min-height: 100% !important;
+    height: 100%;
+}
 
 /*************************************************
 HEADER
 *************************************************/
 header{
-  padding: 0px 50px;
+  padding: 0px ;
   background-image: url(./img/VsBg.jpg);
   background-position: center;
  background-repeat: no-repeat;
+
+}
+
+header.row h2{
+  margin: 10px 0px;
 }
 .p1{
   color: Tomato;
@@ -25,9 +33,20 @@ header{
 .vs{
     color:#f2ccff;
 }
-/* header>h1,header>h2{
-  display: inline-block;
-} */
+
+@media only screen and (max-width: 670px) {
+   header.row h2{
+     font-size: 17px;
+   }
+ }
 /*************************************************
 MAIN CONTENT
 *************************************************/
+main{
+  height: 80%;
+}
+.player1{
+  background-color: Tomato;
+  height: 75%;
+  width: 90%;
+}
