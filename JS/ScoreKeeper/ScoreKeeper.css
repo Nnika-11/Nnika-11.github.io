@@ -45,8 +45,17 @@ MAIN CONTENT
 main{
   height: 80%;
 }
-.player1{
-  background-color: Tomato;
+.players{
   height: 75%;
   width: 90%;
+
+}
+.players h1{
+  font-size: 200px;
+}
+.player1{
+  background-color: Tomato;
+}
+.player2{
+  background-color: DodgerBlue;
 }
