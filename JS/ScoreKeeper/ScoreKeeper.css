@@ -43,7 +43,13 @@ header.row h2 {
   header.row h2 {
     font-size: 17px;
   }
+
+  main.row {
+    height: 94%;
+  }
 }
+
+
 
 /*************************************************
 MAIN CONTENT
