@@ -71,6 +71,18 @@ section.content{
   font-size: 200px;
   cursor:cell;
 }
+.winner{
+animation: pulse 3s infinite;
+color: #003300;
+}
+
+@keyframes pulse
+{
+
+0% {background-color:#80cd92;}
+50% {background-color: #555;}
+100% {background-color: #80cd92; }
+}
 
 .player1 {
   background-color: Tomato;
