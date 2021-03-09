@@ -6,45 +6,38 @@ p1Score = document.querySelector("#p1Score");
 p2Score = document.querySelector("#p2Score");
 maxValue = document.querySelector("#maxValue");
 
-  setScore(ps1, p1Score, p1);
-  setScore(ps2, p2Score, p2);
+p1Points = 0;
+p2Points = 0;
+gameOver = false;
 
+ps1.forEach((item) => {
+      item.addEventListener("click", () => {
+        if (!gameOver) {
+          p1Points++;
+          p1Score.innerText = p1Points;
+          if (p1Points == parseInt(maxValue.value)) {
+            p1.classList.add("winner");
+            gameOver = true;
+          }
+        }
+      });
+    });
 
+    reset = document.querySelector(".btn"); reset.addEventListener("click", () => {
+      p1.classList.remove("winner");
+      p2.classList.remove("winner");
+      p1Score.innerText = 0;
+      p2Score.innerText = 0;
+      // maxValue.value = 10;
+      p1Points = 0;
+      p2Points = 0;
+      gameOver = false;
+    });
 
-function setScore(players, playerScore, player) {
-
-
-  players.forEach((item) => {
-    item.removeEventListener("click");
-    score = parseInt(playerScore.innerText);
-    item.addEventListener("click", () => {
-      score ++;
-      if (score == parseInt(maxValue.value)) {
-        player.classList.add("winner");
-      }
-      if (score > parseInt(maxValue.value));
-      else
-        playerScore.innerText = score;
-    })
-  });
-}
-
-reset = document.querySelector(".btn");
-reset.addEventListener("click", () =>{
-  p1.classList.remove("winner");
-  p2.classList.remove("winner");
-  p1Score.innerText = 0;
-  p2Score.innerText = 0;
-  maxValue.value = 10;
-  setScore(ps1, p1Score, p1);
-  setScore(ps2, p2Score, p2);
-});
-
-//exception handling
-maxValue.addEventListener("click", () => {
-  maxValue.value = "";
-});
-maxValue.addEventListener("mouseout", () => {
-  if (maxValue.value <= 0 || !parseInt(maxValue.value))
-    maxValue.value = "10"
-});
+    //exception handling
+    maxValue.addEventListener("click", () => {
+      maxValue.value = "";
+    }); maxValue.addEventListener("mouseout", () => {
+      if (maxValue.value <= 0 || !parseInt(maxValue.value))
+        maxValue.value = "10"
+    });
