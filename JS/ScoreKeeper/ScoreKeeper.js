@@ -1,43 +1,60 @@
-ps1 = document.querySelectorAll(".player1");
-ps2 = document.querySelectorAll(".player2");
-p1 = document.querySelector("#p1");
-p2 = document.querySelector("#p2");
-p1Score = document.querySelector("#p1Score");
-p2Score = document.querySelector("#p2Score");
 maxValue = document.querySelector("#maxValue");
+p1Btns = document.querySelectorAll(".player1");
+p2Btns = document.querySelectorAll(".player2");
 
-p1Points = 0;
-p2Points = 0;
 gameOver = false;
+player1 = {
+  display: document.querySelector("#p1"),
+  score: document.querySelector("#p1Score"),
+  points: 0
+}
 
-ps1.forEach((item) => {
-      item.addEventListener("click", () => {
-        if (!gameOver) {
-          p1Points++;
-          p1Score.innerText = p1Points;
-          if (p1Points == parseInt(maxValue.value)) {
-            p1.classList.add("winner");
-            gameOver = true;
-          }
-        }
-      });
-    });
+player2 = {
+  display: document.querySelector("#p2"),
+  score: document.querySelector("#p2Score"),
+  points: 0
+}
 
-    reset = document.querySelector(".btn"); reset.addEventListener("click", () => {
-      p1.classList.remove("winner");
-      p2.classList.remove("winner");
-      p1Score.innerText = 0;
-      p2Score.innerText = 0;
-      // maxValue.value = 10;
-      p1Points = 0;
-      p2Points = 0;
-      gameOver = false;
-    });
+p1Btns.forEach((item) => {
+  item.addEventListener("click", () => {
+    scoreChange(player1);
+  });
+});
 
-    //exception handling
-    maxValue.addEventListener("click", () => {
-      maxValue.value = "";
-    }); maxValue.addEventListener("mouseout", () => {
-      if (maxValue.value <= 0 || !parseInt(maxValue.value))
-        maxValue.value = "10"
-    });
+p2Btns.forEach((item) => {
+  item.addEventListener("click", () => {
+    scoreChange(player2);
+  });
+});
+
+function scoreChange(player) {
+  if (!gameOver) {
+    player.points++;
+    player.score.innerText = player.points;
+    if (player.points == parseInt(maxValue.value)) {
+      player.display.classList.add("winner");
+      gameOver = true;
+    }
+  }
+}
+
+resetBtn = document.querySelector(".btn");
+resetBtn.addEventListener("click", () => reset());
+
+function reset() {
+  for (let p of [player1, player2]) {
+    p.display.classList.remove("winner");
+    p.score.innerText = 0;
+    p.points = 0;
+    gameOver = false;
+  }
+}
+//exception handling
+maxValue.addEventListener("click", () => {
+  maxValue.value = "";
+  reset();
+});
+maxValue.addEventListener("mouseout", () => {
+  if (maxValue.value <= 0 || !parseInt(maxValue.value))
+    maxValue.value = "10"
+});
