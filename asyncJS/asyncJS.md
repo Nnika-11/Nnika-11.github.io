@@ -8,4 +8,4 @@ The call stack is primarily used for function invocation (call). **LIFO**
 
 JS is **Single Threaded**, but browser itself with Web APIs getting take cares for making requests. Once it's done it's pushed back obto the stack as call back.
 
-***A callback*** is a function passed as an argument to another function. (possible to have to many of them)
+***A callback*** is a function passed as an argument to another function. (possible to have many of them)
