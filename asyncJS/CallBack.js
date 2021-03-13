@@ -40,8 +40,8 @@ const fakeRequest = (url, success, failure) => {
   }), timer;
 }
 
-
 //lets run 3 fake requests one after another
+// CallBack hell
 
 fakeRequest("mywebsite/page1",
   () => {
