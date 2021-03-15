@@ -30,6 +30,30 @@ const changeColors = (color) => {
 };
 
 changeColors("RosyBrown")
-.then(()=>changeColors("BlueViolet"))
-.then(()=>changeColors("DarkCyan"))
-.then(()=>changeColors("Lavender"));
+  .then(() => changeColors("BlueViolet"))
+  .then(() => changeColors("DarkCyan"))
+  .then(() => changeColors("Lavender"));
+
+
+const makeFakeRequest = (url) => {
+  return new Promise((resolve, reject) => {
+    timer = Math.floor(Math.random() * 4);
+    if (timer > 1) resolve(`Data from ${url}`);
+    else reject("Connection timout");
+  });
+};
+
+//return promise within then to do a ladder request!!!
+makeFakeRequest("mySite/home")
+  .then((data) => {
+    console.log(data);
+    return makeFakeRequest("mySite/page2");
+  })
+  .then(() => {
+    console.log("page 2 proceed");
+    return makeFakeRequest("mySite/page3");
+  })
+  .then((data) =>
+    console.log(data))
+  .catch((data) =>
+    console.log(data));

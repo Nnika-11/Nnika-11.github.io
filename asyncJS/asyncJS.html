@@ -1,25 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
 </head>
+
 <body>
   <p> <b>A callback</b> is a function passed as an argument to another function. (possible to have many of them)</p>
   <code>function myCalculator(num1, num2, myCallback) { <br>
     let sum = num1 + num2;<br>
     myCallback(sum);<br>
-  }</code>
+    }</code>
   <h1 id="demo"></h1>
-  <p> <b>A promise</b>  is an object that may produce a single value some time in the future: either a resolved value, or a reason that it’s not resolved </p>
-  <img style = "width:400px" src="https://www.freecodecamp.org/news/content/images/2020/06/Ekran-Resmi-2020-06-06-12.21.27.png" alt="">
-
+  <p> <b>A promise</b> is an object that may produce a single value some time in the future: either a resolved value, or a reason that it’s not resolved </p>
+  <p>return promise within then to do a ladder request!!!</p>
+  <img style="width:400px" src="https://www.freecodecamp.org/news/content/images/2020/06/Ekran-Resmi-2020-06-06-12.21.27.png" alt="">
+  <code><br>makeFakeRequest("mySite/home")<br>
+    .then((data) => {<br>
+    console.log(data);<br>
+    return makeFakeRequest("mySite/page2");<br>
+    })<br>
+    .then((data) =><br>
+    console.log(data))<br>
+    .catch((data) =><br>
+    console.log(data));<br>
+  </code>
 
 
   <!-- <script type="text/javascript" src = "./CallBack.js"> -->
-  <script type="text/javascript" src = "./Promise.js">
+  <script type="text/javascript" src="./Promise.js">
   </script>
 </body>
+
 </html>
