@@ -14,3 +14,6 @@ JS is **Single Threaded**, but browser itself with Web APIs getting take cares f
 
 The ***Promise object*** represents the eventual completion (or failure) of an asynchronous operation and its resulting value.
 like make a request from any API etc.
+
+The keyword ***async*** before a function makes the function return a promise
+The keyword ***await*** before a function makes the function wait for a promise

@@ -30,7 +30,7 @@ const changeColors = (color) => {
 };
 
 changeColors("RosyBrown")
-  .then(() => changeColors("BlueViolet"))
+  .then(() => changeColors("BlueViolet"))  // return changeColors("BlueViolet")
   .then(() => changeColors("DarkCyan"))
   .then(() => changeColors("Lavender"));
 
@@ -45,7 +45,7 @@ const makeFakeRequest = (url) => {
 
 //return promise within then to do a ladder request!!!
 makeFakeRequest("mySite/home")
-  .then((data) => {
+  .then(data => {
     console.log(data);
     return makeFakeRequest("mySite/page2");
   })
@@ -53,7 +53,7 @@ makeFakeRequest("mySite/home")
     console.log("page 2 proceed");
     return makeFakeRequest("mySite/page3");
   })
-  .then((data) =>
+  .then(data =>
     console.log(data))
-  .catch((data) =>
+  .catch(data =>
     console.log(data));
