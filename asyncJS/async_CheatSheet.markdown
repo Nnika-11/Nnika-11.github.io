@@ -10,7 +10,7 @@ The term ***asynchronous*** refers to two or more objects or events not existing
 
 JS is **Single Threaded**, but browser itself with Web APIs getting take cares for making requests. Once it's done it's pushed back obto the stack as call back.
 
-#Callback & Promise
+# Callback & Promise
 
 ***A callback*** is a function passed as an argument to another function. (possible to have many of them)
 
@@ -44,7 +44,7 @@ makeFakeRequest("mySite/home")
   })
 
 ```
-#Async & Await
+# Async & Await
 
 The keyword ***async*** before a function makes the function return a promise
 The keyword ***await*** before a function makes the function wait for a promise
